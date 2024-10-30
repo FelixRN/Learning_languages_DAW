@@ -1,23 +1,13 @@
+import java.util.Arrays;
+//Arrays
 public class Main {
-    public static void main(String[] args) {
-       String text = "Hola Mundo!";
-
-       int largo = text.length();
-        System.out.println(largo);
-
-        String texto = text.replace("Hola", "Chao");
-        System.out.println(texto);
-
-        System.out.println(texto.endsWith("undo"));
-        System.out.println(texto.startsWith("Ch"));
-        System.out.println(texto.contains("und"));
-        System.out.println(texto.indexOf("Mund"));
-
-        System.out.println(texto.toUpperCase());
-        System.out.println(texto.toLowerCase());
-
-        String malo = "    chanchito  feliz   ";
-        System.out.println(malo.trim());
-        System.out.println(malo);
+    public static void main(java.lang.String[] args) {
+        int[] num = {0, 1, 2, 3, 4};
+        num[0] = 7;
+        num[4] = 2;
+        System.out.println(Arrays.toString(num));
+        System.out.println(num.length);
+        Arrays.sort(num);
+        System.out.println(Arrays.toString(num));
     }
 }

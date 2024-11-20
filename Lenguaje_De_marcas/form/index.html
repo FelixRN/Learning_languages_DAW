@@ -31,28 +31,30 @@
     <h1>Paso 2.Pedido</h1>
     <fieldset>
         <legend>Datos del producto </legend>
-        <select name="select" size="4">
-            <option value="o1" selected>Libros</option>
+        <select id="select">
+            <optgroup label="Libros">
                 <option value="opcion1">Recetas</option>
                 <option value="opcion2">Historia</option>
                 <option value="opcion3">Técnicos</option>
-        
-            <option value="o2" selected>Calendarios</option>
+            </optgroup>
+
+                <optgroup label="Calendarios">
                 <option value="opcion1">Escolares</option>
                 <option value="opcion2">Anuales</option>
-            
-            <option value="o3" selected>Calendarios</option>
+            </optgroup>
+                <optgroup label="Material Escolar">
                 <option value="opcion1">Pinturas</option>
                 <option value="opcion2">Rotuladores</option>
-                <option value="opcion2">Cuadernos</option>
-                <option value="opcion2">Gomas</option>
+                <option value="opcion3">Cuadernos</option>
+                <option value="opcion4">Gomas</option>
+            </optgroup>
             </select>
     </fieldset>   
 
     <fieldset>
         <legend>Información de interés</legend>
-        <label for="textarea">Comentarios</label>
-        <textarea rows="5" cols="30">Escriba aquí su comentario...</textarea>
+        <label for="textarea">Comentarios</label><br>
+        <textarea rows="5" cols="30">Escriba aquí su comentario...</textarea><br>
         <label>Acepto recibir información publicitaria</label>
         <input type="checkbox" name="Aceptar" required>
     </fieldset>

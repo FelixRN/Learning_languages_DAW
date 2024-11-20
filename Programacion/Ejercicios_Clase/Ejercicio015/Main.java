@@ -5,48 +5,79 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        //Lista de ls 5 libros
-        
-        List<Inventory> inventoryList;
-        inventoryList = new ArrayList<Inventory>();
-
-        //Preguntamos que libro va
-        System.out.println("¿Que libro deseas buscar");
         Scanner scanner = new Scanner(System.in);
-        String book = scanner.next();
+        String text = "";
+        int id = 1;
+        List<Book> bookList;
+        bookList = new ArrayList<Book>();
 
-        //Instanciar 5 
-        //Colocar los colores en hexadecimal
-        Inventory I1 = new Inventory(1, "La metamorfosis","Frank Kafka", 1801, 25.5f);
-        Inventory I2 = new Inventory(2, "La torre oscura","Stephen King", 1802, 18.6f);
-        Inventory I3 = new Inventory(3, "Kafka en la orilla","Haruki Murakami", 1803, 99.9f);
-        Inventory I4 = new Inventory(4, "Psicologia de ventas","Brian Tracy", 1804, 25.47f);
-        Inventory I5 = new Inventory(5, "45 leyes del poder","Robert Greene", 1805, 24.5f);
+        //Agregar libros al sistema
+        do{
+        //Instanciamos
+        Autor autor = new Autor();
+        Year year = new Year();
+        Price price = new Price();
 
-        inventoryList.add(I1);
-        inventoryList.add(I2);
-        inventoryList.add(I3);
-        inventoryList.add(I4);
-        inventoryList.add(I5);
+        //Preguntar por el libro 
+        System.out.println("Ingresa el nombre del libro: ");
+        //Creamos la variable nameBook para guardar el dato 
+        String nameBook = scanner.nextLine().trim();//Podríamos agregar .trim() para eliminar los espacios en los extremos
 
-        if(book.equals("La metamorfosis")){
-            System.out.println(I1);
-        } else if(book.equals("La torre oscura")){
-            System.out.println(I2);
-        } else if(book.equals("Kakfa en la orilla")){
-            System.out.println(I3);
-        } else if(book.equals("Psicoligia de ventas")){
-            System.out.println(I4);
-        } else{
-            System.out.println(I5);
+        //Validar que el nombre no esté vacío
+        if (nameBook.isEmpty()) {
+            System.out.println("ERROR El nombre del libro no puede estar vacío. Inténtalo nuevamente.");
+            continue;
         }
-scanner.close();
-    
-        //Recorrer lista
-       //for (int i = 0; i < inventoryList.size(); i++){
-            //Inventory Inventory = inventoryList.get(i);
-            //Conversación - Cliente
-           // System.out.println();
+        //Instanciamos el libro con las propiedades anteriormente creadas
+        Book newBook = new Book(id, nameBook, autor, year, price);
+        //Agregamos el libro creado a la lista
+        bookList.add(newBook);
+        System.out.println("Libro añadido  " + newBook);
+
+        id++;
+        //Preguntar si se desea continuar
+        System.out.println("¿Quieres agregar otro libro? (si/no)");
+        //Convertimos los caracteres en String con "toLowerCase"
+        text = scanner.nextLine().trim().toLowerCase();
+        if (text.isEmpty()) {
+            System.out.println("ERROR El nombre del libro no puede estar vacío. Inténtalo nuevamente.");
+            continue;
+        }
+
+        } while (!text.equals("no")); //No continuar mientras diga "no"
+
+    //Conversacion con el cliente
+    do {
+        System.out.println("Cliente: Estoy buscando el libro " );
+        String clientBook = scanner.nextLine().trim();
+        if (clientBook .isEmpty()) {
+            System.out.println("ERROR El nombre del libro no puede estar vacío. Inténtalo nuevamente.");
+            continue;
+        }
+        //Buscar el libro en la lista
+
+    boolean found = false;
+    for (Book book : bookList){
+        if (book.getTitle().equalsIgnoreCase(clientBook)) {
+            System.out.println("Libro encontrado: " + book);
+            //Verificar las condiciones
+            if(book.getYear() < 1900 && book.getPrice() > 20){
+                System.out.println("Compro este libro");
+            } found = true;
+            System.out.println("No quiero este libro");
+            break; //Salir cuando se encuentre el libro
         }
     }
+
+    if (!found){
+        System.out.println("Ese libro no se encuentra disponible.");
+    }
+    System.out.println("¿Deseas buscar otro libro? (si/no)");
+    text = scanner.nextLine().toLowerCase();
+    } while (!text.equals("no"));
+
+    scanner.close();
+}
+}
+
 

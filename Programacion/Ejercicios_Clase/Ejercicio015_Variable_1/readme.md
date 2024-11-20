@@ -23,37 +23,13 @@ Se simulará una conversación entre un empleado y cliente comprará preguntando
 
 ### Modelo
 
-- Clase Year
-    - private int year;
-
-- Price
-    -private float price;
-
-- Book
-    -private int id;
-    -private String title;
-    -private Autor autor;
-    -private Year year;
-    -private Price price;
-
-
-
 ### Lógica de negocio
 
-- Instanciar la clase Autor
-- Instanciar la clase Year
-- Instanciar la clase Book
+- Crear una lista del inventario y del autor
+- Crear un inventario con las propiedades: id, título, Autor(elegido aleatoriamente dentro de una lista), Año (entre 1800 y 2024) y precio (aleatorio decimal)
+- Acabara cuando el dueño escribar "Listo"
 
-- Crear la lista mediante teclado (scanner)
-- Guardar el dato
-
-- Instanciamos la clase Book para poder añadirlo a la lista
-
-- Preguntar si queremos añadir más libros a la lista o no
-
-- Agregar un bucle para la conversión y encontrar el libro anteriormente agregado
-- Definir las condiciones en el bucle para que las cumpla
-
-- Si el dato introducido no es encontrado preguntar si desea otro libro, en caso de no ser así cerrar el programa
-
-
+- Conversacion:
+"Teneis " + título 
+lo tengo/no lo tengo
+si lo tiene le dira las propiedades y el cliente comprará los que sean anteriores a 1900 y que valgan más de  20

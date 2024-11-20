@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Paso 1. Identificación</h1>
+<form>
+    <fieldset>
+        <legend>Datos del cliente</legend>
+        <labe for="email">Correo electrónico</labe>
+        <input type="email" name="email" required><br>
+        
+        <label for="Contraseña">Contraseña</label>
+        <input type="password" name="password" required> <br>
+        <p>(Longitud mínima 6 caracteres)</p>
+    </fieldset>
+
+    <fieldset>
+        <legend>Tipo de cliente</legend>
+        <label for="radio">Particular</label>
+        <input type="radio" name="check" required> <br>
+        <label for="radio">Asociación</label>
+        <input type="radio" name="check" required> <br>
+        <label for="radio">Empresa</label>
+        <input type="radio" name="check" required> <br>
+    </fieldset>
+
+    <h1>Paso 2.Pedido</h1>
+    <fieldset>
+        <legend>Datos del producto </legend>
+        <select name="select" size="4">
+            <option value="o1" selected>Libros</option>
+                <option value="opcion1">Recetas</option>
+                <option value="opcion2">Historia</option>
+                <option value="opcion3">Técnicos</option>
+        
+            <option value="o2" selected>Calendarios</option>
+                <option value="opcion1">Escolares</option>
+                <option value="opcion2">Anuales</option>
+            
+            <option value="o3" selected>Calendarios</option>
+                <option value="opcion1">Pinturas</option>
+                <option value="opcion2">Rotuladores</option>
+                <option value="opcion2">Cuadernos</option>
+                <option value="opcion2">Gomas</option>
+            </select>
+    </fieldset>   
+
+    <fieldset>
+        <legend>Información de interés</legend>
+        <label for="textarea">Comentarios</label>
+        <textarea rows="5" cols="30">Escriba aquí su comentario...</textarea>
+        <label>Acepto recibir información publicitaria</label>
+        <input type="checkbox" name="Aceptar" required>
+    </fieldset>
+
+
+    <h3>Paso 3. Pago</h3>
+    <form>
+    <fieldset>
+        <legend>Datos del envio </legend>
+        <label for="direccion">Dirección</label>
+        <input type="text" name="direccion" required> <br>
+        <label for="ciudad">ciudad</label>
+        <input type="text" name="ciudad" required> <br>
+        <label for="cp">Código postal</label>
+        <input type="number" name="cp" required> <br>
+    </fieldset>    
+    <input type="submit" name="Comprar" value="COMPRAR">
+    <input type="reset" name="clean" value="LIMPIAR FORMULARIO">
+
+
+</form>
+</body>
+</html>

@@ -11,10 +11,11 @@ public class Main{
         pisoList = new ArrayList<Piso>();
 
         //Agregar los pisos
-        do{
+    do{
         //Instanciamos
         Metros metros = new Metros();
         Planta planta = new Planta();
+        Ascensor ascensor = new Ascensor();
 
         //Preguntar por el piso 
         System.out.println("Ingresa el nombre de los pisos(min 3): ");
@@ -26,8 +27,9 @@ public class Main{
             System.out.println("ERROR El nombre del piso no puede estar vacío. Inténtalo nuevamente.");
             continue;
         }
+        
         //Instanciamos el piso con las propiedades anteriormente creadas
-        Piso newPisos = new Piso(namePiso,id, metros, planta);
+        Piso newPisos = new Piso(namePiso,id, metros, planta, ascensor);
         //Agregamos el piso creado a la lista
         pisoList.add(newPisos);
         System.out.println("Piso añadido  " + newPisos);
@@ -59,6 +61,8 @@ boolean found = false;
 for (Piso piso : pisoList){
     if (piso.getCalle().equalsIgnoreCase(clientPisos)) {
     System.out.println("Piso encontrado: " + piso);
+    
+    
     //Verificar las condiciones
 //        if(piso.getYear() < 1900 && piso.getPrice() > 20){
 //            System.out.println("Compro este libro");
@@ -76,5 +80,5 @@ text = scanner.nextLine().toLowerCase();
 } while (!text.equals("no"));
 
 scanner.close();
-}
     }
+}

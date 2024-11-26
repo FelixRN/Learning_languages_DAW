@@ -3,14 +3,14 @@ public class Piso{
     private int id;
     private Metros metros;
     private Planta planta; 
-    //private Ascensor ascensor;
+    private Ascensor ascensor;
 
-public Piso(String calle, int id, Metros metros, Planta planta){ //Ascensor ascensor
+public Piso(String calle, int id, Metros metros, Planta planta, Ascensor ascensor){ 
         this.calle = calle;
         this.id = id;
         this.metros = metros;
         this.planta = planta;
-        //this.ascensor = ascensor;
+        this.ascensor = ascensor;
     }
 
     public String getCalle(){
@@ -30,13 +30,13 @@ public Piso(String calle, int id, Metros metros, Planta planta){ //Ascensor asce
         return this.planta.getPlanta();
     }
 
-    //public String getAscensor(){
-    //    return this.ascensor.getAscensor();
-   // }
+    public String getAscensor(){
+        return this.ascensor.getAscensor();
+    }
 
     @Override
     public String toString(){
-        return "Los datos son los siguientes :  Calle " + calle + ", Id " + id + " ,metros: " + metros + " ,Planta " + planta;
+        return "Los datos son los siguientes :  Calle " + calle + ", Id " + id + " ,metros: " + metros + " ,Planta " + planta + ascensor;
     }
 }
 

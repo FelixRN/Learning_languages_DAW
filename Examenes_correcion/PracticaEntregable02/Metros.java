@@ -28,7 +28,6 @@ public class Metros {
         float generateMetros = random.nextFloat() * (max - min) + min;
         //Si no fuera tipo float reemplazar la f por 0
         return Math.round(generateMetros * 100.0) / 100.f;
-
 }
 @Override
 public String toString(){

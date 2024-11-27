@@ -45,12 +45,27 @@ span{
 }
 
 .left{
+    text-align: right;
     outline-color: black;
-    outline-style: dotted;
+    outline-style: dotte;
+    padding: 10px;
 }
 
 .right{
     outline-color: black;
-    outline-style: dotted;
-    padding-right: 50px;
+    outline-style: dotte;
+
+
+}
+
+.des{
+    width: 15%;
+}
+.des2{
+    width: 8%;
+}
+label {
+    display: inline-block;
+    width: 20%;
+    margin-bottom: 10px;
 }

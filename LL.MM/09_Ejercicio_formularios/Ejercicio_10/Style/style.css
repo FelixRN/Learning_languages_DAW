@@ -1,0 +1,56 @@
+caption{
+    text-align: left;
+    padding: 10px;
+    padding-left: 0%;
+    padding-top: 0%;
+}
+
+
+table{
+    margin: 0 auto;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th,tr,td{
+    border: 1px solid black;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+h2{
+    color: blue;
+    background-color: lightcyan;
+}
+
+span{
+    color: teal;
+}
+
+.c{
+    text-align: center;
+    font-weight: bold;
+}
+
+.a{
+    color: blue;
+}
+
+.b{
+    color: teal;
+}
+
+.bg{
+    background-color: rgb(226, 226, 226);
+}
+
+.left{
+    outline-color: black;
+    outline-style: dotted;
+}
+
+.right{
+    outline-color: black;
+    outline-style: dotted;
+    padding-right: 50px;
+}

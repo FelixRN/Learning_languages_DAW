@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-
+import java.lang.String;
 
 public class Main {
     public static void main(String[] args) {
@@ -18,9 +18,9 @@ public class Main {
         Year year = new Year();
         Price price = new Price();
 
-        //Preguntar por el libro 
+        //Preguntar por el libro
         System.out.println("Ingresa el nombre del libro: ");
-        //Creamos la variable nameBook para guardar el dato 
+        //Creamos la variable nameBook para guardar el dato
         String nameBook = scanner.nextLine().trim();//Podríamos agregar .trim() para eliminar los espacios en los extremos
 
         //Validar que el nombre no esté vacío

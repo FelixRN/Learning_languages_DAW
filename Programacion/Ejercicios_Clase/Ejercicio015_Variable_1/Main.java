@@ -12,7 +12,7 @@ public class Main {
         Autor autor = new Autor();
         Year year = new Year();
         Price price = new Price();
-        //Instanciar 5 
+        //Instanciar 5
         //Colocar los colores en hexadecimal
         Inventory I1 = new Inventory(1, "La metamorfosis",autor, year, price);
         Inventory I2 = new Inventory(2, "La torre oscura",autor, year, price);

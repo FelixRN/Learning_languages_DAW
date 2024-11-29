@@ -3,9 +3,9 @@ import java.lang.String;
 public class Conversion_de_tipos {
     public static void main(java.lang.String[] args){
         //Conversión implícita
-        byte a = 1;
-        double b = 15;
-        double c = a + b;
+        //byte a = 1;
+        //double b = 15;
+        //double c = a + b;
 
         //Conversión explícita
         int x = 15;

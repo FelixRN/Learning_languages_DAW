@@ -10,4 +10,11 @@ Realiza un juego "Hanoi" en donde tendras que pasar todos los discos a la comunn
 - La regla: No debe de haber un disco de menor tamaño encima de otro
 - Puedes hacer las combinaciones que quiereas pero siempre respetando la regla.
 
+## Prueba 1
+
+- Solicitamos el número de discos al usuario para el programa
+- Movemos los discos desde una posición inicial llamada "origen" hasta el "destino" utilizando una torre intermetdia "auxiliar 
+- Se imprime por pantalla cada movimiento que se ha hecho para solucionar el problema
+
+
 

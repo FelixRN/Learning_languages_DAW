@@ -2,28 +2,28 @@ package Scanner;
 import java.util.Scanner;
 
 public class Keyboard {
-    private static Scanner Scanner = new scanner;
+    private static Scanner scanner = new Scanner(System.in); // Inicialización correcta del Scanner
     
-    public static String text(){
-        String text = scanner.nextLine();
-        return text;    
+    public static String text() {
+        return scanner.nextLine(); // Devuelve la línea ingresada
     }
 
     public static int nextInt() {
         int nInt = scanner.nextInt();
-        scanner.nextLine();
+        scanner.nextLine(); // Limpia el buffer
         return nInt;
     }
 
-    public static float nextFloat(){
+    public static float nextFloat() {
         float nFloat = scanner.nextFloat();
-        scanner.nextLine();
+        scanner.nextLine(); // Limpia el buffer
         return nFloat;
     }
 
     public static double nextDouble() {
         double nDouble = scanner.nextDouble();
-        scanner.nextLine();
+        scanner.nextLine(); // Limpia el buffer
         return nDouble;
     }
 }
+

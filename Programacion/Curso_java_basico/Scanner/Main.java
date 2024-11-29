@@ -19,6 +19,6 @@ public class Main{
             text = Keyboard.text();
             System.out.println("El texto introducdio es " + text);
         } while(!text.equals("Adios"));
-        Keyboard.close();
+        
     }
 }

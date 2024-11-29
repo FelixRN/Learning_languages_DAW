@@ -1,11 +1,11 @@
 public class Operadores_aritmeticos {
     public static void main(java.lang.String[] args){
-        int a = 2 + 2;
-        int b = 2 - 2;
-        int c = 2 * 2;
-        int m = 4 % 3; //Nos indica el resto de la operación de división
-        float d = 10f / 3f;
-        double e = 10.0 / 3.0;
+       // int a = 2 + 2;
+       // int b = 2 - 2;
+       // int c = 2 * 2;
+       // int m = 4 % 3; //Nos indica el resto de la operación de división
+        //float d = 10f / 3f;
+        //double e = 10.0 / 3.0;
 
         int x = 5;
         // int y = x++;

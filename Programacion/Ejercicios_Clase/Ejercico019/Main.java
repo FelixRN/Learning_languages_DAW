@@ -38,7 +38,7 @@ System.out.println("Sumamos " + (num1 + num2));
 
         scanner.close(); // Cerrar el Scanner
         }
-*/   
+*/
         private static int KeyboardInt(String name){
 
         Scanner scanner = new Scanner(System.in);
@@ -56,6 +56,7 @@ System.out.println("Sumamos " + (num1 + num2));
             }
         } while (!isNumber);
         return num;
-    }
+        }
+}
 }
 

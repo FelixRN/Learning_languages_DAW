@@ -1,7 +1,0 @@
-Confi vscode:
-theme:palenight (mid contrast)
-
-Extensiones: 
-- Error Lens
-- Extension Pack for Java: Language support for Java / Debugger for Java / Maven for Java / Gradle for Java / Project Manager for Java / IntelliCode
-- indent-rainbow

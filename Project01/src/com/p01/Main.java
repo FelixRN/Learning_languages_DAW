@@ -1,5 +1,6 @@
 package com.p01;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
@@ -25,4 +26,5 @@ public class Main {
 	value = "model_type=memory";
 }
 return value;
+}
 }

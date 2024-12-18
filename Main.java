@@ -1,13 +1,16 @@
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.util.Scanner;
 
 
 public class Main {
 	public static void main(String[] args) {
 		String configPath= "C:\\Users\\USUARIO\\Desktop\\book.config";
-        String fileValue = loadConfig(configPath);
-		System.out.println("file value " + fileValue);
+		boolean resulti = saveConfig(configPath, "model_type=memory");
+		System.out.println("El resultado de escribir el fichero: " + result);
+        //String fileValue = loadConfig(configPath);
+		//System.out.println("file value " + fileValue);
 	}
 
 	private static String loadConfig(String configPath) {
@@ -18,6 +21,7 @@ public class Main {
 		while(scanner.hasNextLine()){
 			String line = scanner.nextLine();
 			value += line + "\n";
+			
         //value.append(line.append("\n)"));
 		}
 		scanner.close();
@@ -27,4 +31,20 @@ public class Main {
 }
 return value;
 }
+
+private static boolean saveConfig(String confiPath){
+	try{
+		FileOutputStream fout=new FileOutputStream(configPath);
+		String s = "Welcome to javaTpoint";
+		byte b[] = s.getBytes();//CONVERTING STRING INTO BYTE ARRAY
+		fout.write(b);
+		fout.close();
+		System.out.println("Success");
+		return true;
+	} catch(Exception e){
+		System.out.println(e);
+		return false;
+	}
+}
+
 }
